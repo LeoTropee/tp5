@@ -1,0 +1,21 @@
+<!DOCTYPE  HTML>
+<html  xmlns:th="http :// www.thymeleaf.org">
+<head>
+    <title th:text="Article"/>
+    <meta http -equiv="Content -Type" content="text/html;
+charset=UTF -8" />
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body class="container" style="background: papayawhip">
+    <header th:insert="/NavBar.html :: navbar"/>
+    <ul class="list-group">
+        <li class="list-group-item" th:text="${article.title}"/>
+        <li class="list-group-item" th:text="${article.creation}"/>
+        <li class="list-group-item" th:text="${article.content}"/>
+        <li class="list-group-item" th:text="${article.author}"/>
+    </ul>
+
+</body>
+</html>

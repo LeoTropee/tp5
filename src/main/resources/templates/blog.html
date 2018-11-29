@@ -1,0 +1,19 @@
+<!DOCTYPE  HTML>
+<html  xmlns:th="http ://www.thymeleaf.org">
+<head>
+    <title>Blog</title>
+    <meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+</head>
+<body>
+<header th:insert="/NavBar.html :: navbar"/>
+
+<h1>Les  differents  articles </h1>
+
+<tr th:each="article: ${allArticles}">
+
+    <td><a th:href="@{/article(idGET=${article.id})}"><p th:text="${article.title}"/></a></td>
+
+</tr>
+</body>
+</html>
